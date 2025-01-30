@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    width: 220px;
+    cursor: pointer;
+}
+
+/* Selected Item (Default State) */
+.dropdown-selected {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Options */
+.dropdown-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    display: none; /* Initially Hidden */
+}
+
+.dropdown-options li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Highlight hovered option */
+.dropdown-options li:hover {
+    background: #ddd;
+}
+
+/* Show dropdown when active */
+.dropdown.active .dropdown-options {
+    display: block;
+}
+
+/* Rotate icon when dropdown is open */
+.dropdown.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Selected Option Highlight */
+.selected {
+    font-weight: bold;
+    color: blue;
+}
